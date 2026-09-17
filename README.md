@@ -1,3 +1,3 @@
 # AI Invoice Manager
 
-Full-stack AI-powered invoice management application.
+Full-stack invoice dashboard built with React, Express, PostgreSQL, and Google Gemini.
