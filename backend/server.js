@@ -3,6 +3,7 @@ const cors = require("cors");
 const pool = require("./db");
 
 const userRoutes = require("./routes/userRoutes");
+const customerRoutes = require("./routes/customerRoutes");
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/users", userRoutes);
+app.use("/api/customers", customerRoutes);
 
 app.get("/", (req, res) => {
     res.send("AI Invoice Manager Backend is running!");
