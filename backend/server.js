@@ -4,6 +4,9 @@ const pool = require("./db");
 
 const userRoutes = require("./routes/userRoutes");
 const customerRoutes = require("./routes/customerRoutes");
+const invoiceRoutes = require("./routes/invoiceRoutes");
+const invoiceItemRoutes = require("./routes/invoiceItemRoutes");
+const aiRoutes = require("./routes/aiRoutes");
 
 const app = express();
 
@@ -12,6 +15,9 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/customers", customerRoutes);
+app.use("/api/invoices", invoiceRoutes);
+app.use("/api/invoice-items", invoiceItemRoutes);
+app.use("/api/ai", aiRoutes);
 
 app.get("/", (req, res) => {
     res.send("AI Invoice Manager Backend is running!");
